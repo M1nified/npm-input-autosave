@@ -1,0 +1,18 @@
+{
+    "compileOnSave":true,
+    "compilerOptions": {
+        "module": "none",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "index.js",
+        "sourceMap": true,
+        "target": "es6"
+    },
+    "files": [
+        "typings/CustomOption.ts",
+        "typings/Checkbox.ts",
+        "typings/InputText.ts",
+        "typings/InputAutosave.ts"
+    ]
+}

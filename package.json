@@ -1,0 +1,27 @@
+{
+  "name": "input-autosave",
+  "version": "1.0.0",
+  "description": "Autosave input/textarea values in local storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M1nified/npm-input-autosave.git"
+  },
+  "keywords": [
+    "input",
+    "autosave",
+    "textarea",
+    "localstorage",
+    "local",
+    "storage"
+  ],
+  "author": "M1nified",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M1nified/npm-input-autosave/issues"
+  },
+  "homepage": "https://github.com/M1nified/npm-input-autosave#readme"
+}
