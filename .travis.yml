@@ -8,5 +8,5 @@ before_script:
 addons:
   firefox: "latest"
 script:
-  - karma start --single-run --browsers FireFox
+  - karma start --single-run --browsers Firefox
   
