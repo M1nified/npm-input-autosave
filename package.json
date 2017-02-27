@@ -4,7 +4,7 @@
   "description": "Autosave input/textarea values in local storage",
   "main": "index.js",
   "scripts": {
-    "test": "karma"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/M1nified/npm-input-autosave/issues"
   },
-  "homepage": "https://github.com/M1nified/npm-input-autosave#readme"
+  "homepage": "https://github.com/M1nified/npm-input-autosave#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-json-fixtures-preprocessor": "0.0.6"
+  }
 }

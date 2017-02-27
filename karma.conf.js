@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sun Feb 26 2017 14:35:18 GMT+0100 (Środkowoeuropejski czas stand.)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -10,11 +10,12 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'fixture'],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'tests/*Test.html',
       'index.js',
       'tests/**/*Spec.*'
     ],
@@ -28,6 +29,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.html': ['html2js'],
+      '**/*.json': ['json_fixtures']
     },
 
 
@@ -56,7 +59,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
@@ -66,5 +69,10 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
+
+    ,
+    jsonFixturesPreprocessor: {
+      variableName: '__json__'
+    }
   })
 }
