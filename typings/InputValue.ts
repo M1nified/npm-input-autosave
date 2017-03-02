@@ -1,5 +1,5 @@
 namespace InputAutosaveNamespace{
-  export class InputText implements CustomOption{
+  export class InputValue implements CustomOption{
     element: HTMLInputElement;
     constructor(selector: string | HTMLInputElement) {
       if (typeof selector === 'string') {
@@ -14,7 +14,6 @@ namespace InputAutosaveNamespace{
     }
     autosaveEnable() {
       if (typeof Storage === 'undefined') return false;
-      console.log(this.element);
       let change = () =>{
         localStorage.setItem(this.element.id, this.element.value);
       }

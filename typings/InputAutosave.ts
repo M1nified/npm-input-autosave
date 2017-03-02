@@ -16,16 +16,37 @@ namespace InputAutosaveNamespace {
     getFields() {
       this.fields = [];
       this.elements.forEach(element => {
-        switch (element.type) {
-          case 'checkbox':
-            this.fields.push(new Checkbox(element));
-            break;
-          case 'number':
-          case 'text':
-            this.fields.push(new InputText(element));
-            break;
-          default:
-            break;
+        console.log(element,element.contentEditable)
+        if(element.nodeName === 'INPUT' || element.nodeName === 'input'){
+          switch (element.type) {
+            case 'checkbox':
+              this.fields.push(new InputChecked(element));
+              break;
+            case 'color':
+            case 'date':
+            case 'datetime-local':
+            case 'email':
+            case 'hidden':
+            case 'image':
+            case 'month':
+            case 'number':
+            case 'password':
+            case 'range':
+            case 'search':
+            case 'tel':
+            case 'text':
+            case 'time':
+            case 'url':
+            case 'week':
+              this.fields.push(new InputValue(element));
+              break;
+            default:
+              break;
+          }
+        }else if(element.nodeName === 'TEXTAREA' || element.nodeName === 'textarea'){
+          this.fields.push(new ASTextarea(element));
+        }else if(element.contentEditable === true || element.contentEditable == 'true'){
+          this.fields.push(new ASContentEditable(element));
         }
       })
     }

@@ -1,5 +1,5 @@
 namespace InputAutosaveNamespace{
-  export class Checkbox implements CustomOption{
+  export class InputChecked implements CustomOption{
     element: HTMLInputElement;
     constructor(selector: string | HTMLInputElement) {
       if (typeof selector === 'string') {

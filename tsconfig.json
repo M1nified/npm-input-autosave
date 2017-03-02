@@ -11,8 +11,10 @@
     },
     "files": [
         "typings/CustomOption.ts",
-        "typings/Checkbox.ts",
-        "typings/InputText.ts",
+        "typings/InputChecked.ts",
+        "typings/InputValue.ts",
+        "typings/Textarea.ts",
+        "typings/ContentEditable.ts",
         "typings/InputAutosave.ts"
     ]
 }
