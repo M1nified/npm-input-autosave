@@ -1,6 +1,6 @@
 {
   "name": "input-autosave",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Autosave input/textarea values in local storage",
   "main": "index.js",
   "scripts": {

@@ -1,0 +1,6 @@
+example
+node_modules
+typings
+.gitignore
+.travis.yml
+tsconfig.json
