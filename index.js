@@ -120,7 +120,6 @@ var InputAutosaveNamespace;
         getFields() {
             this.fields = [];
             this.elements.forEach(element => {
-                console.log(element, element.contentEditable);
                 if (element.nodeName === 'INPUT' || element.nodeName === 'input') {
                     switch (element.type) {
                         case 'checkbox':
